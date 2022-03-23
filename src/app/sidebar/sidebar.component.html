@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="use-cases">
+    <select
+      class="use-cases"
+      name="useCases"
+      [(ngModel)]="selectedRectangles"
+      id="useCases"
+      (change)="setRectangles()">
+      <option value="" disabled>Select Use Case</option>
+      <option *ngFor="let useCase of useCases" [ngValue]="useCase.value">
+        {{ useCase.name }}
+      </option>
+    </select>
+  </div>
+
+  <div class="rectangle-form form-one">
+    <app-rectangle-form
+      [formName]="'Rectangle One'"
+      [observableData]="rectangleOneSubject"
+      (onRectangleUpdated)="rectangleOneUpdated($event)">
+    </app-rectangle-form>
+  </div>
+
+  <div class="rectangel-form form-two">
+    <app-rectangle-form
+      class="rectangle-form form-two"
+      [formName]="'Rectangle Two'"
+      [observableData]="rectangleTwoSubject"
+      (onRectangleUpdated)="rectangleTwoUpdated($event)">
+    </app-rectangle-form>
+  </div>
+</div>

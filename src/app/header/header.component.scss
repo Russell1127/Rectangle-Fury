@@ -1,0 +1,36 @@
+@use '../../styles.scss' as common;
+@import '../../styles.scss';
+
+.container {
+    height: 100%;
+    background-color: common.$primary-color;
+    border-bottom: common.$tertiary-color 3px solid;
+    
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+    align-items: center;
+    place-items: center;
+
+    grid-template-areas:
+        "text button-1 button-2 button-3 .";
+
+    a.neon-button {
+        font-family: "HotRushSans", Arial, Helvetica, sans-serif;
+        font-size: 1.5rem;
+        letter-spacing: .1rem;
+
+        @include neon-button;
+    }
+
+    a.neon-button.button-1 {
+        grid-area: button-1;
+    }
+
+    a.neon-button.button-2 {
+        grid-area: button-2;
+    }
+
+    a.neon-button.button-3 {
+        grid-area: button-3;
+    }
+}

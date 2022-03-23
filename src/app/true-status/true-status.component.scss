@@ -1,0 +1,42 @@
+@use '../../styles.scss' as common;
+
+.container {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  align-items: center;
+  place-items: center;
+
+  grid-template-areas: status;
+
+  .status-text {
+    font-family: "HotRushScript", Arial, Helvetica, serif;
+    color: common.$bold-color;
+    grid-area: "status";
+    font-size: 5rem;
+  }
+
+  .fly-in {
+    animation: flyInFadeOut 3s linear forwards;
+  }
+}
+
+@keyframes flyInFadeOut {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(10);
+  }
+}

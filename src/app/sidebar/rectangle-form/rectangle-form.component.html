@@ -1,0 +1,42 @@
+<div class="container">
+  <p class="form-title">{{ formName }}</p>
+  <form [formGroup]="rectangleForm" (ngSubmit)="rectangleFormSubmitted()">
+    <div class="display">
+      <div class="screen scanlines">
+        <div class="x-group form-group">
+          <label for="x" class="label-text">X: </label>
+          <input id="x" type="number" class="form-input" formControlName="x" />
+        </div>
+
+        <div class="y-group form-group">
+          <label for="y" class="label-text">Y: </label>
+          <input id="y" type="number" class="form-input" formControlName="y" />
+        </div>
+
+        <div class="width-group form-group">
+          <label for="width" class="label-text">W: </label>
+          <input
+            id="width"
+            type="number"
+            class="form-input"
+            formControlName="width"
+          />
+        </div>
+
+        <div class="height-group form-group">
+          <label for="height" class="label-text">H: </label>
+          <input
+            id="height"
+            type="number"
+            class="form-input"
+            formControlName="height"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="draw-btn form-group">
+      <button type="submit">Draw</button>
+    </div>
+  </form>
+</div>

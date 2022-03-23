@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="header">
+    <app-header></app-header>
+  </div>
+  <div class="header-text rotate-text">Rectangle
+    <br>
+    <span>Fury</span>
+  </div>
+  <div class="sidebar"><app-sidebar></app-sidebar></div>
+  <div class="mainContent"><app-shape-canvas></app-shape-canvas></div>
+
+  <div *ngIf="showTrueStatus" class="status"><app-true-status></app-true-status></div>
+  <div *ngIf="showFalseStatus" class="status"><app-false-status></app-false-status></div>
+</div>

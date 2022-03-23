@@ -1,0 +1,40 @@
+@use '../../styles.scss' as common;
+
+.container {
+    place-content: center;
+    place-items: center;
+
+    display: grid;
+    grid-template-rows: .1fr repeat(2, 1fr);
+    grid-template-areas: "use"
+                         "form1"
+                         "form2";
+    
+    .use-cases {
+        grid-area: "use";
+
+        font-family: "HotRushSans", Arial, Helvetica, sans-serif;
+        font-size: 1.5rem;
+        color: common.$bold-color;
+
+        width: 100%;
+        height: 100%;
+        background: none;
+        border-color: common.$bold-color;
+        border-width: 3px;
+        border-radius: 7px;
+        cursor: pointer;
+    }
+
+    .rectangle-form {
+        color: common.$muted-secondary-color;
+    }
+
+    .form-one {
+        grid-area: "form1";
+    }
+
+    .form-two {
+        grid-area: "form2";
+    }
+}
